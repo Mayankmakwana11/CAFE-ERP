@@ -1,0 +1,10 @@
+CREATE TABLE order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    item_name VARCHAR(255) NOT NULL,
+    item_option VARCHAR(255) NOT NULL,
+    item_price DECIMAL(10, 2) NOT NULL,
+    quantity INT NOT NULL,
+    total DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(id)
+);
